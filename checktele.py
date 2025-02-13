@@ -19,7 +19,6 @@ from telethon import events
 a = 'qwertyuiopassdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
-s = '8'
 
 banned = []
 with open("banned.txt", "r") as f:
@@ -55,7 +54,7 @@ def gen_user(choice):
     if choice == "خماسي":
         c = str(''.join((random.choice(a) for i in range(1))))
         d = str(''.join((random.choice(e) for i in range(1))))
-        s = str(''.join((random.choice(s) for i in range(1))))
+        s = str(''.join((random.choice("8") for i in range(1))))
         f1 = c+s+s+s+d
         f2 = c+s+s+s+d
         f = f1,f2
@@ -64,7 +63,7 @@ def gen_user(choice):
         if username in banned[0]:
             c = str(''.join((random.choice(a) for i in range(1))))
             d = str(''.join((random.choice(e) for i in range(1))))
-            s = str(''.join((random.choice(s) for i in range(1))))
+            s = str(''.join((random.choice("8") for i in range(1))))
             f1 = c+s+s+s+d
             f2 = c+s+s+s+d
             f = f1,f2
@@ -75,13 +74,13 @@ def gen_user(choice):
     elif choice == "خماسي1":
         c = random.choices(a)
         d = random.choices(e)
-        s = random.choices(s)
+        s = random.choices("8")
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
     elif choice == "خماسي2":
         c = random.choices(a)
         d = random.choices(a)
-        s = random.choices(s)
+        s = random.choices("8")
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
     elif choice == "خماسي3":
