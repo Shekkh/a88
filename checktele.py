@@ -52,39 +52,35 @@ def check_user(username):
 
 def gen_user(choice):
     if choice == "خماسي":
-        c = str(''.join((random.choice(a) for i in range(1))))
-        d = str(''.join((random.choice(e) for i in range(1))))
-        s = str(''.join((random.choice("8") for i in range(1))))
-        f1 = c+s+s+s+d
-        f2 = c+s+s+s+d
-        f = f1,f2
-        f = random.choice(f)
-        username = f
+        c = d = random.choices(a)
+        d = random.choices(b)
+        s = random.choices(e)
+        f = [c[0], d[0], d[0], d[0], s[0]]
+        random.shuffle(f)
+        username = ''.join(f)
         if username in banned[0]:
-            c = str(''.join((random.choice(a) for i in range(1))))
-            d = str(''.join((random.choice(e) for i in range(1))))
-            s = str(''.join((random.choice("8") for i in range(1))))
-            f1 = c+s+s+s+d
-            f2 = c+s+s+s+d
-            f = f1,f2
-            f = random.choice(f)
-            username = f
+            c = d = random.choices(a)
+            d = random.choices(b)
+            s = random.choices(a)
+            f = [c[0], d[0], d[0], d[0], s[0]]
+            random.shuffle(f)
+            username = ''.join(f)
         else:
             pass
     elif choice == "خماسي1":
         c = random.choices(a)
         d = random.choices(e)
-        s = random.choices("8")
+        s = random.choices(b)
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
     elif choice == "خماسي2":
         c = random.choices(a)
         d = random.choices(a)
-        s = random.choices("8")
+        s = random.choices(b)
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
     elif choice == "خماسي3":
-        c = random.choices("8")
+        c = random.choices(b)
         d = random.choices(b)
         s = random.choices(a)
         f = [s[0], c[0], c[0], c[0], d[0]]
@@ -93,28 +89,28 @@ def gen_user(choice):
     elif choice == "خماسي4":
         c = random.choices(a)
         d = random.choices(e)
-        s = random.choices( b)
+        s = random.choices( e)
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
 
     elif choice == "خماسي5":
         c = random.choices(a)
-        d = random.choices(a)
-        s = random.choices(b)
-        f = [c[0], s[0], s[0], s[0], d[0]]
+        d = random.choices(e)
+        s = random.choices(e)
+        f = [c[0], d[0], s[0], s[0], s[0]]
         username = ''.join(f)
 
     elif choice == "خماسي6":
         c = random.choices(a)
-        d = random.choices(b)
-        s = random.choices(b)
-        f = [c[0], s[0], s[0], s[0], d[0]]
+        d = random.choices(e)
+        s = random.choices(e)
+        f = [c[0], c[0], c[0], s[0], d[0]]
         username = ''.join(f)
         
     elif choice == "خماسي7":
         c = random.choices(a)
         d = random.choices(e)
-        s = random.choices(e)
+        s = random.choices("8")
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
         
@@ -138,30 +134,34 @@ async def _(event):
  -- -- -- -- - 
  خماسي 
  s8889 - s888d 
+ عشوائي
  -- -- -- -- -- -- -- -- -- -- --
   خماسي1
   s888d - s8887
+  عشوائي
  -- -- -- -- -- 
  خماسي2
- s888d
+ s888d 
+ حروف
   -- -- -- -- --  
   خماسي3
   s8884
+  ارقام
  -- -- -- -- --
  خماسي4
- a999m - s6669
+ a999m - s8887 - skkkc - skkk9
+ عشوائي
  -- -- -- -- -- 
   خماسي5
-  s666h - s555b
+  sx999 - s7666 - sxccc - s7ccc
  -- -- -- -- -- 
 خماسي6
-s4445 - s5554
+sssxc - sss7s - sssc7 - sss78
  -- -- -- -- -- 
  خماسي7
- sfff8 - sjjjh - s777d - s9998
+ s888x - s8889
   -- -- -- -- -- 
   تسيت
-  sxcsxc
    -- -- -- -- -- 
    طريقه الصيد هيه كالتالي
  - .صيد + نوع الصيد تكتب الاسم 
@@ -258,7 +258,7 @@ async def hunterusername(event):
         trys[0] += 1
     isclaim.clear()
     isclaim.append("off")
-    await event.client.send_message(event.chat_id, "انتهاء الفحص تم صيد معرف #x5 ")
+    await event.client.send_message(event.chat_id, "انتهاء الفحص")
 
 
 @eighthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت"))
