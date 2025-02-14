@@ -84,7 +84,7 @@ def gen_user(choice):
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
     elif choice == "خماسي3":
-        c = random.choices(s)
+        c = random.choices("8")
         d = random.choices(b)
         s = random.choices(a)
         f = [s[0], c[0], c[0], c[0], d[0]]
