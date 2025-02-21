@@ -19,7 +19,7 @@ from telethon import events
 a = 'qwertyuiopassdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
-
+s = '8182838485868789808'
 banned = []
 with open("banned.txt", "r") as f:
     f = f.read().split()
@@ -87,22 +87,22 @@ def gen_user(choice):
     elif choice == "خماسي4":
         c = random.choices(a)
         d = random.choices(e)
-        s = random.choices( e)
+        s = random.choices(s)
         f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
 
     elif choice == "خماسي5":
         c = random.choices(a)
-        d = random.choices(e)
-        s = random.choices(e)
-        f = [c[0], d[0], s[0], s[0], s[0]]
+        d = random.choices(a)
+        s = random.choices(s)
+        f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
 
     elif choice == "خماسي6":
         c = random.choices(a)
-        d = random.choices(e)
-        s = random.choices(e)
-        f = [c[0], c[0], c[0], s[0], d[0]]
+        d = random.choices(b)
+        s = random.choices(s)
+        f = [c[0], s[0], s[0], s[0], d[0]]
         username = ''.join(f)
         
     elif choice == "خماسي7":
@@ -147,14 +147,14 @@ async def _(event):
   ارقام
  -- -- -- -- --
  خماسي4
- a999m - s8887 - skkkc - skkk9
+ x888b - s8885
  عشوائي
  -- -- -- -- -- 
   خماسي5
-  sx999 - s7666 - sxccc - s7ccc
+  s888h 
  -- -- -- -- -- 
 خماسي6
-sssxc - sss7s - sssc7 - sss78
+s8887
  -- -- -- -- -- 
  خماسي7
  s888x - s8889
