@@ -20,6 +20,7 @@ a = 'qwertyuiopassdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
 s = '56789'
+
 banned = []
 with open("banned.txt", "r") as f:
     f = f.read().split()
