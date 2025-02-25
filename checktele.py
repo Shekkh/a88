@@ -19,7 +19,7 @@ from telethon import events
 a = 'qwertyuiopassdfghjklzxcvbnm'
 b = '1234567890'
 e = 'qwertyuiopassdfghjklzxcvbnm1234567890'
-s = '8182838485868789808'
+s = '56789'
 banned = []
 with open("banned.txt", "r") as f:
     f = f.read().split()
@@ -149,6 +149,7 @@ async def _(event):
  خماسي4
  x888b - s8885
  عشوائي
+ 56789 و الجوه 
  -- -- -- -- -- 
   خماسي5
   s888h 
